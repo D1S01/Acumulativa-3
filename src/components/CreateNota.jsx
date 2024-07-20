@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Nota } from "./Nota";
 
 
 export function CreateNota(){
@@ -33,6 +34,9 @@ export function CreateNota(){
         const newNoteList = [...noteList, newNota]
         setNotelist(newNoteList)
 
+        // idea bizarra, hcer un if que pueda dicernir entre importantes o no
+        // y dependiendo de lo que filtre se traear un o el otro componente
+
         alert("La nota se ha agregado con exito :D")
     }
     // se supone que esxporto esta funcion para pode colcarla como un efecto de un evento al presionar las equis de las respectivas notas
@@ -40,5 +44,27 @@ export function CreateNota(){
     // export function RemoveNota(){
     //     const.
     // }
+
+    return(
+        <div className="containerCreateNota">
+            <div className="containerH1"><h1>Post It Simulator?</h1></div>
+            
+            <div className="createNota">
+                <div className="inpts">
+                    <input ref={title} type="text" placeholder="Titulo" />
+                    <input ref={description} type="text" placeholder="Descripcion" />
+                    <input ref={chk} type="checkbox" /> Importante!
+                </div>
+                <div className="boton">
+                    <button on onClick={addNota}>AGREGAR</button>
+                </div>
+            </div>
+            <div>
+                {
+                    noteList.map(nota => <Nota tituloNota={nota.titulo} descripcionNota={nota.descripcion} importanteNota={nota.importante} />)
+                }
+            </div>
+        </div>
+    )
 
 }
