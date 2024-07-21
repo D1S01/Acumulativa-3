@@ -1,5 +1,6 @@
 /** Componente para preparar render en index */
 // import { MyPlaylist } from "./components/MyPlaylist"
+// import './css/styles.css'
 import { CreateNota } from "./components/CreateNota";
 
 function App(){

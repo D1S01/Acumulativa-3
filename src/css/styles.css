@@ -1,0 +1,162 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    font-size: 62.5%;
+  }
+
+body{
+    background-color: #666;
+    font-size: 1.6rem;
+} */
+
+/* html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #666;
+    font-size: 1.6rem;
+} */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: #666;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    width: 110.0rem;
+    max-width: 111.0rem;
+}
+
+/* espacio para configurar el id root */
+
+/* Configurando CreateNota */
+.containerH1{
+    font-family: Arial;
+}
+.createNota{
+    display: flex;
+    justify-content: space-between;
+    width: 110.0rem ;
+}
+.inpts{
+    font-family: Arial;
+}
+.inpt{
+    height: 3.5rem;
+    border-radius: .5rem;
+    margin-left: 1.3rem;
+}
+.titulo{
+    width: 24.5rem;
+}
+.descripcion{
+    width: 38.5rem;
+}
+.centrarChk{
+    display: inline;
+    /* height: 100px; */
+    /* width: 100px; */
+}
+.checkbox{
+    /* size: 1.0rem; */
+    display: inline;
+    margin-top: .5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* .boton{
+    font-family: Arial;
+} */
+
+.boton button{
+    font-family: Arial;
+    background-color: #111;
+    color: white;
+    width: 24.5rem;
+    height: 3.5rem;
+    border-radius: .5rem;
+}
+
+/* configurando el fichero(Donde iran las notas) */
+.fichero{
+    display: flex;
+    justify-content: center;
+    /* background-color: lime; */
+    /* flex-wrap: wrap; */
+    width: 100.0rem;
+}
+.centrarContenido{
+    display: flex;
+    /* justify-content: center; */
+    /* background-color: lime; */
+    flex-wrap: wrap;
+    width: 86.0rem;
+}
+
+/* Configurando las notas  */
+.containerNota{
+    display: flex;
+    justify-content: center;
+    /* max-width: 100%; */
+    margin-top: 1.0rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+}
+
+.containerFlex{
+    max-width: 18.5rem;
+    width: 18.0rem;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+/* .equis{
+    display: flex;
+    justify-content: flex-end;
+} */
+.equis{
+    align-self: flex-end;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.containerFlex .title{
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.description{
+    font-family: cursive;
+}
+
+.yellow{
+    background-color: #ffffcc;
+    display: flex;
+    max-width: 22.5rem;
+    max-height: 32.5rem;
+    width: 20.5rem;
+    height: 21.5rem;
+}
+
+.red{
+    background-color: #ec7063;
+    max-width: 22.5rem;
+    max-height: 32.5rem;
+    width: 20.5rem;
+    height: 21.5rem;
+}
