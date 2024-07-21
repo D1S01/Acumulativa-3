@@ -1,4 +1,4 @@
-// import '../css/styles.css'
+
 import { useRef, useState } from "react";
 import { Nota } from "./Nota";
 import { v4 as uuidv4 } from 'uuid';
@@ -24,7 +24,6 @@ export function CreateNota() {
         const valorTitulo = title.current.value;
         const valorDescripcion = description.current.value;
         const valorChk = chk.current.checked;
-        // console.log(`Se escribieron ${valorTitulo}, ${valorDescripcion}, ${valorChk}`)
 
         if (valorDescripcion.trim() !== ""){
             const newNota = {
@@ -38,7 +37,6 @@ export function CreateNota() {
         const newNoteList = [...noteList, newNota]
         setNoteList(newNoteList)
         
-        // alert('La nota se ha agregado con exito! :D')
         } else {
             alert('El campo descripcion es obligatorio, no puede estar vacio')
         }
@@ -46,7 +44,7 @@ export function CreateNota() {
         
     }
 
-// se supone que esxporto esta funcion para pode colcarla como un efecto de un evento al presionar las equis de las respectivas notas
+// funcion que se enviara al modulo Nota.jsx, el cual se usara al preionar la X
     function RemoveNota(id) {
         setNoteList(noteList.filter(nota => nota.id !== id))
     }
